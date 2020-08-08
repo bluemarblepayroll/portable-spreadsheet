@@ -2,7 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/portable-writers-spreadsheet.svg)](https://badge.fury.io/rb/portable-writers-spreadsheet) [![Build Status](https://travis-ci.org/bluemarblepayroll/portable-writers-spreadsheet.svg?branch=master)](https://travis-ci.org/bluemarblepayroll/portable-writers-spreadsheet) [![Maintainability](https://api.codeclimate.com/v1/badges/3984ca34a23267b3ea0a/maintainability)](https://codeclimate.com/github/bluemarblepayroll/portable-writers-spreadsheet/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/3984ca34a23267b3ea0a/test_coverage)](https://codeclimate.com/github/bluemarblepayroll/portable-writers-spreadsheet/test_coverage) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This library is a plugin for Portable and provides a new document writer for rendering spreadsheets.  It currently is limited to Microsoft Excel Open XML Spreadsheets (.xlsx).
+This library is a plugin for [Portable](https://github.com/bluemarblepayroll/portable) and provides a new document writer for rendering spreadsheets.  It currently is limited to Microsoft Excel Open XML Spreadsheets (.xlsx) and uses the library [fast_excel](https://github.com/Paxa/fast_excel) under the hood.
 
 ## Installation
 
@@ -20,7 +20,7 @@ bundle add portable-writers-spreadsheet
 
 ## Examples
 
-See the main Portable repository for examples.  The only difference is if you wish to use this library then render the documents with Portable::Writers::Spreadsheet (instead of Portable::Writers::Csv).
+See the main [Portable](https://github.com/bluemarblepayroll/portable) repository for examples.  The only difference is if you wish to use this library then render documents with Portable::Writers::Spreadsheet (instead of Portable::Writers::Csv).
 
 ## Contributing
 
