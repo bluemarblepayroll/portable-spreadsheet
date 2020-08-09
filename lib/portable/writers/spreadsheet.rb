@@ -23,8 +23,7 @@ module Portable
 
         document.sheets.map do |sheet|
           data_source = data_provider.data_source(sheet.name)
-
-          worksheet = workbook.add_worksheet(sheet.name)
+          worksheet   = add_worksheet(workbook, sheet)
 
           write_head(worksheet, sheet, data_source)
           write_data_table(worksheet, sheet, data_source, time)
@@ -60,6 +59,12 @@ module Portable
         data_source.footer_rows.each { |row| worksheet.append_row(row) }
 
         sheet.footer_rows.each { |row| worksheet.append_row(row) }
+      end
+
+      def add_worksheet(workbook, sheet)
+        name = sheet.name.to_s.empty? ? 'Sheet1' : sheet.name
+
+        workbook.add_worksheet(name)
       end
     end
   end
