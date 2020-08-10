@@ -22,7 +22,7 @@ module Portable
         workbook = FastExcel.open(filename, constant_memory: true)
 
         document.sheets.map do |sheet|
-          data_source = data_provider.data_source(sheet.name)
+          data_source = data_provider.data_source(sheet.data_source_name)
           worksheet   = add_worksheet(workbook, sheet)
 
           write_head(worksheet, sheet, data_source)
@@ -51,7 +51,7 @@ module Portable
         worksheet.append_row(row_renderer.headers) if sheet.include_headers?
 
         data_source.data_rows.each do |row|
-          worksheet.append_row(row_renderer.render(row, time).values)
+          worksheet.append_row(row_renderer.render(row, time))
         end
       end
 

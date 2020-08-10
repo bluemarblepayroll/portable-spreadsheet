@@ -1,8 +1,10 @@
 options:
   byte_order_mark: utf_8
 sheets:
-  - name: sheet1
+  - name: manual_sheet1
+    data_source_name: sheet1
     data_table:
+      auto: false
       columns:
         - header: first
         - header: last
@@ -14,7 +16,13 @@ sheets:
               output_format: '%m/%d/%Y'
         - header: funny
         - header: status
-    include_headers: false
+      include_headers: false
+    footer_rows:
+      - [ Brought to you by no one ]
+    header_rows:
+       - [ 'SIMPLE EXAMPLE' ]
+  - name: auto_sheet1
+    data_source_name: sheet1
     footer_rows:
       - [ Brought to you by no one ]
     header_rows:
