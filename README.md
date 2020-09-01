@@ -9,7 +9,7 @@ This library is a plugin for [Portable](https://github.com/bluemarblepayroll/por
 To install through Rubygems:
 
 ````
-gem install install portable-writers-spreadsheet
+gem install portable-writers-spreadsheet
 ````
 
 You can also add this to your Gemfile:
